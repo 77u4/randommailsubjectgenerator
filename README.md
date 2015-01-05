@@ -1,8 +1,7 @@
 # randommailsubjectgenerator
-This program is supposed to help you in creating creative E-Mail subjects that'll help to get you higher on NSA's ranking of suspicious persons. 
+This program is supposed to help you in creating creative E-Mail subjects to climb higher on the FBI's terror list.
 
-#### Terror List
-| **rank** | **name** |
+| rank | name |
 | ---- | ---- |
 | 1 | Mohammed Ali Hammadei |
 | 2 | Ali Saed Bin Ali El-Hoorie |
