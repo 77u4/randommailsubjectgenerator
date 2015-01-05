@@ -1,0 +1,17 @@
+/* 
+    That's just a template! I'll fill it later! 
+*/
+
+{
+    strings:{
+        terrorism:{
+            string:[
+                'bomb',
+                'shoe bomb'
+            ]
+        },
+        extremism:{
+            string:'rote Flora'
+        }
+    }
+}
