@@ -2,6 +2,7 @@
 This program is supposed to help you in creating creative E-Mail subjects that'll help to get you higher on NSA's ranking of suspicious persons. 
 
 | rank | name |
+| ---- | ---- |
 | 1 | Mohammed Ali Hammadei |
 | 2 | Ali Saed Bin Ali El-Hoorie |
 | 3 | Joanne Deborah Chesimard |
