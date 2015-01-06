@@ -6,6 +6,7 @@ function getCategories()
 	@Return: Table
 		list of all categories available
 	--]]--
+
 end
 
 function getStringCount(category)
@@ -18,6 +19,7 @@ function getStringCount(category)
 	@Return: number
 		Number of strings in $category. not null.
 	--]]--
+
 end
 
 function getString(category, num)
@@ -32,6 +34,7 @@ function getString(category, num)
 	
 	@Return: String
 	--]]--
+
 end
 
 function getMailSubject(category)
@@ -66,7 +69,7 @@ function displayCategories()
 	display categories
 		prints available categories taken from getCategories()
 	--]]--
-	print("Available Categories:", "n/a")
+	print("Available Categories:", "n/a") --has to be edited!
 end
 
 function displayError(error)
@@ -127,14 +130,3 @@ for pos, argument in ipairs(userArguments) do
 end --end for
 
 -- [[ start generating ]]
-
-
-
-
-
-
-
-
-
-
-
