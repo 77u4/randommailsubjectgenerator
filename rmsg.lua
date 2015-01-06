@@ -54,6 +54,21 @@ function displayHelp()
 	dofile("help.lua")
 end
 
+function displayAbout()
+	--[[--
+	writes about section to STDOUT
+	--]]--
+	dofile("about.lua")
+end
+
+function displayCategories()
+	--[[--
+	display categories
+		prints available categories taken from getCategories()
+	--]]--
+	print("Available Categories:", "n/a")
+end
+
 function displayError(error)
 	--[[--
 	display error message
@@ -69,24 +84,49 @@ end
 Begin interactive command line tool
 --]]--
 
-local userArguments = {} --construct an empty table
+local userArguments = {} --construct an empty table for the user-given arguments
+local finalCommand = {}  --construct an empty table for the commands to be executed
 
 --[[ get user arguments ]]
 for posn,val in ipairs (arg) do
 	if string.find(val,"^%-[a-zA-Z]$") then 		--a command starting with a single dash (like -h)
-		local insert = string.sub(val,2)
+		local insert = string.sub(val,2,2)
 		table.insert(userArguments, posn, insert)
 	elseif string.find(val,"^%-%-[a-zA-Z]+$") then 	--a command starting with a double dash (like --help)
-		local insert = string.sub(val,3)
+		local insert = string.sub(val,3,3)
 		table.insert(userArguments, posn, insert)
 	end
 end
 
-for posn, argument in userArguments () do
-	--if argument == ""
-	print(posn, argument)
-end
 
+-- [[ process user input ]]
+for pos, argument in ipairs(userArguments) do
+	if argument == "h" then 						--help
+		displayHelp()
+	elseif argument == "w" then						--words
+		local parameter = arg[pos+1]
+		if parameter == nil then --parameter is nil
+			displayError("The wordcount parameter expects to be set.")
+		elseif string.find("9"..parameter.."9","^[0-9]+$") then --parameter is a number
+			table.insert(finalCommand,"w;"..parameter)
+		else 									--parameter is not a number
+			displayError("The wordcount parameter expects to be a numeric value.")
+		end --end type check
+	elseif argument == "c" then
+		local parameter = arg[pos+1]
+		if parameter == nil or string.find(parameter,"^%-[a-zA-Z]$") or string.find(parameter,"^%-%-[a-zA-Z]+$") then --check if it is an argument
+			displayCategories()
+		else -- parameter set
+			table.insert(finalCommand,"c;"..parameter)
+		end
+	elseif argument == "a" then 					--about
+		displayAbout()
+	else 											--random && default
+		--[[ This line of code does not exist. ]]
+	end --end if $argument
+end --end for
+
+-- [[ start generating ]]
 
 
 
