@@ -17,7 +17,7 @@ strings = [
                 "security",
                 "Exercise",
                 "maritime",
-                "domian awareness",
+                "domain awareness",
                 "breach",
                 "cops",
                 "MDA",
@@ -30,14 +30,125 @@ strings = [
                 "disaster assistance",
                 "Militia",
                 "screening",
-                ""
+                "Cops MDA threat",
+                "Shooting",
+                "Lockdown",
+                "DNDO",
+                "domestic nuclear shots refired bomb",
+                "evacuation crash",
+                "hostage",
+                "riot",
+                "emergency landing",
+                "pipe bomb",
+                "dirt bomb team",
+                "DMAT facility",
+                "domestic nuclear detection",
+                "organized crime"
             ],
         "hazmat_and_nuclear":
             string: [
                 "nuclear",
                 "Biological infection",
-                "Spillover"
+                "Spillover",
+                "chemical spill event",
+                "anthrax",
+                "suspicious package",
+                "suspicious device",
+                "chemical blister agent",
+                "national laboratory",
+                "biological exposure",
+                "nuclear facility",
+                "epedemic burn",
+                "nuclear threat",
+                "hazardous nerve agent",
+                "hazardous material",
+                "incident",
+                "Ricin",
+                "industrial spill",
+                "Sarin",
+                "radiation",
+                "infection",
+                "North Korea",
+                "DPRK",
+                "radioactive powder"
             ],
+        "health_concern":
+            string: [
+                "outbreak",
+                "salmonella agriculture",
+                "contamination",
+                "small pox listeria",
+                "exposure",
+                "plague",
+                "symptoms",
+                "virus",
+                "human to human",
+                "mutation",
+                "evacuation",
+                "human to animal",
+                "resistant",
+                "bacteria",
+                "influenza",
+                "antiviral",
+                "recall center for disease control",
+                "wave",
+                "ebola",
+                "CDC",
+                "Pandemic",
+                "H1N1",
+                "Tuberculosis",
+                "TB",
+                "Pork",
+                "avian agro",
+                "terror swine",
+                "H5N1",
+                "FMD",
+                "public health",
+                "food poisoning",
+                "drug administration",
+                "FDA",
+                "DEA",
+                "infection",
+                "Tamiﬂu",
+                "world health organizations",
+                "quarantine",
+                "noro virus",
+                "WHO",
+                "epedemic viral",
+                "hemorrhagic fever",
+                "E. Coli"
+            ],
+        "infrastructure_security":
+            string: [
+                "infrastructure security",
+                "airplane",
+                "airport",
+                "chemical fire",
+                "critical infrastructure",
+                "subway electric",
+                "BART failure and outage",
+                "AMTRAK",
+                "MARTA",
+                "black out",
+                "collapse",
+                "port authority",
+                "computer infrastructure",
+                "Biosurveillance",
+                "Integration Dock",
+                "Bridge",
+                ""
+            ],
+        "terrorism":
+            string: [
+                "terrorism",
+                ""
+            ,
+        "cyber_security":
+            string: [
+                "cyber security",
+                ""
+            ,
+
 ]
 
 window.strings = strings
@@ -46,62 +157,8 @@ window.strings = strings
 comment
 This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
 
-Domestic Security
-
-Cops (MDA) Threat
-Law enforcement National preparedness Standoff
-Authorities initiative SWAT
-Disaster assistance Militia Screening
-Disaster management Shooting Lockdown
-DNDO (Domestic Nuclear Shots ﬁred Bomb (squad or threat)
-Detection Ofﬁce) Evacuation Crash
-National preparedness Deaths Looting
-Mitigation Hostage Riot
-Prevention Explosion (explosive) Emergency Landing
-Response Police Pipe bomb
-Recovery Disaster medical assistance Incident
-Dirty bomb team (DMAT) Facility
-Domestic nuclear detection Organized crime
-
-HAZMAT & Nuclear
-
-Nuclear Biological infection (or Spillover
-Chemical spill event) Anthrax
-Suspicious package/device Chemical Blister agent
-Toxic Chemical burn Chemical agent
-National laboratory Biological Exposure
-Nuclear facility Epidemic Burn
-Nuclear threat Hazardous Nerve agent
-Cloud Hazardous material incident Ricin
-Plume Industrial spill Sarin
-Radiation Infection North Korea
-Radioactive Powder (white)
-
-Health Concern + HINI
-
-Outbreak Salmonella Agriculture
-Contamination Small Pox Listeria
-Exposure Plague Symptoms
-Virus Human to human Mutation
-Evacuation Human to Animal Resistant
-Bacteria Inﬂuenza Antiviral
-Recall Center for Disease Control Wave
-Ebola (CDC) Pandemic
-Food Poisoning Dnrg Administration (FDA) Infection
-Foot and Mouth (FMD) Public Health Waterlair home
-HSNI Toxic Sick
-Avian Agro Terror Swine
-1-‘ I u Tuberculosis (TB) Pork
-
-Strain Tamiﬂu World Health Organization
-Quarantine Norvo Virus (WHO) (and components)
-H 1N1 Epidemic Viral Hemorrhagic Fever
-Vaccine E. Coli
 Infrastructure Security
-Infrastructure security Airplane (and derivatives)
-Airport Chemical ﬁre
-CIKR (Critical Infrastructure Subway Electric
-& Key Resources) BART Failure or outage
+
 AMTRAK MARTA Black out
 Collapse Port Authority Brown out
 Computer infrastructure N BIC (National Port
@@ -135,7 +192,9 @@ Decapitated equivalents) Mexicles
 U .8. Consulate Lots Zretas New Federation
 Consular Shootout
 El Paso Execution
+
 Terrorism
+
 Terrorism IED (Improvised Explosive Suspicious substance
 Al Qaeda (all spellings) Device) AQAP (AL Qaeda Arabian
 Terror Abu Sayyaf Peninsula)
@@ -172,7 +231,9 @@ Temblor Disaster Interstate
 Extreme weather Snow Burst
 Forest ﬁre Blizzard Emergency Broadcast System
 Brush ﬁre Sleet
+
 Cyber Security
+
 Cyber security 2600 Hacker
 Botnet Spammer China
 DDOS (dedicated denial of Phishing Conﬁcker
