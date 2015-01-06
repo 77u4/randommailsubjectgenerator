@@ -71,15 +71,21 @@ Begin interactive command line tool
 
 local userArguments = {} --construct an empty table
 
-
+--[[ get user arguments ]]
 for posn,val in ipairs (arg) do
-
+	if string.find(val,"^%-[a-zA-Z]$") then 		--a command starting with a single dash (like -h)
+		local insert = string.sub(val,2)
+		table.insert(userArguments, posn, insert)
+	elseif string.find(val,"^%-%-[a-zA-Z]+$") then 	--a command starting with a double dash (like --help)
+		local insert = string.sub(val,3)
+		table.insert(userArguments, posn, insert)
+	end
 end
 
-
-displayHelp()
-
-
+for posn, argument in userArguments () do
+	--if argument == ""
+	print(posn, argument)
+end
 
 
 
