@@ -136,7 +136,16 @@ strings = [
                 "Biosurveillance",
                 "Integration Dock",
                 "Bridge",
-                ""
+                "telecommunications",
+                "transportation security",
+                "grid delays",
+                "national infrastructure",
+                "power service disruption",
+                "smart power lines",
+                "WMATA",
+                "body scanner",
+                "southwest border violence"
+
             ],
         "terrorism":
             string: [
@@ -159,16 +168,6 @@ This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and par
 
 Infrastructure Security
 
-AMTRAK MARTA Black out
-Collapse Port Authority Brown out
-Computer infrastructure N BIC (National Port
-Communications Biosurveillance Integration Dock
-infrastructure Center) Bridge
-Telecommunications Transportation security Cancelled
-Critical infrastructure Grid Delays
-National infrastructure Power Service disruption
-Metro Smart Power lines
-WMATA Body scanner
 Southwest Border Violence
 Drug canel Fort Hancock Gunﬁght
 Violence San Diego 'l‘rai'ficking
