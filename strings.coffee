@@ -1,8 +1,7 @@
 #That's just a template! I'll fill it later! 
-
-    strings:
+strings = [
         "domestic_security":
-            string:
+            string: [
                 "assassination",
                 "emergency",
                 "management",
@@ -19,14 +18,32 @@
                 "Exercise",
                 "maritime",
                 "domian awareness",
-                "breach"
+                "breach",
+                "cops",
+                "MDA",
+                "threat",
+                "law enforcement",
+                "national preparedness",
+                "authorities",
+                "initiative",
+                "SWAT",
+                "disaster assistance",
+                "Militia",
+                "screening",
+                ""
+            ],
         "hazmat_and_nuclear":
-            string:
+            string: [
                 "nuclear",
                 "Biological infection",
-                "Spillover",
+                "Spillover"
+            ],
+]
+
+window.strings = strings
 
 ###
+comment
 This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
 
 Domestic Security
