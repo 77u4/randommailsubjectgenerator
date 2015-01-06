@@ -46,3 +46,49 @@ function getMailSubject(category)
 	--]]--
 
 end
+
+function displayHelp()
+	--[[--
+	writes all commands available to STDOUT
+	--]]--
+	dofile("help.lua")
+end
+
+function displayError(error)
+	--[[--
+	display error message
+	
+	@Parameter: error
+		String -- what to display
+	--]]--
+
+	print("ERROR:",error)
+end
+
+--[[--
+Begin interactive command line tool
+--]]--
+
+local userArguments = {} --construct an empty table
+
+
+for posn,val in ipairs (arg) do
+
+end
+
+
+displayHelp()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
