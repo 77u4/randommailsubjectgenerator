@@ -144,8 +144,49 @@ strings = [
                 "smart power lines",
                 "WMATA",
                 "body scanner",
-                "southwest border violence"
-
+                "southwest border violence",
+                "drug canel",
+                "fort Hancock",
+                "gunfight",
+                "violence",
+                "San Diego",
+                "gang",
+                "Ciudad Juarez",
+                "kidnap",
+                "drug nogales",
+                "calderon",
+                "narcotics",
+                "Sonora Reyosa",
+                "Cocaine",
+                "columbia bust",
+                "marijuana",
+                "Tamaulipas",
+                "Heroin",
+                "MS I3",
+                "MS-I 3",
+                "Meth Lab",
+                "Border drug control",
+                "drug war",
+                "drug trade",
+                "mexico",
+                "mexican army",
+                "illegal immigrants",
+                "Cartel",
+                "Methamphetamine",
+                "smuggling",
+                "smugglers",
+                "southwest cartel",
+                "Michoacana",
+                "Sinaloa",
+                "La Familia Guzman",
+                "Tijuana Reynosa",
+                "Arellano-Felix",
+                "Torrreon Nuevo",
+                "Leon Beltran-Leyva",
+                "Tucson Narco banners",
+                "Mexicles",
+                "Consular Shootout",
+                "El Paso Execution"
             ],
         "terrorism":
             string: [
@@ -165,32 +206,6 @@ window.strings = strings
 ###
 comment
 This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
-
-Infrastructure Security
-
-Southwest Border Violence
-Drug canel Fort Hancock Gunﬁght
-Violence San Diego 'l‘rai'ficking
-Gang Ciudad Juarez Kidnap
-Drug Nogales Calderon
-Narcotics Sonora Reyosa
-Cocaine Colombia Bust
-Marijuana Mara salvatrucha Tamaulipas
-Heroin MS I3 or MS-I 3 Meth Lab
-Border Drug war Drug trade
-Mexico Mexican army Illegal immigrants
-Cartel Methamphetamine Smuggling (smugglers)
-Southwest Cartel de Golfo Matamoros
-Juarez Gulf Cartel Michoacana
-Sinaloa La Familia Guzman
-Tijuana Reynosa Arellano-Felix
-Torrreon Nuevo Leon Beltran-Leyva
-Yuma Narcos Barrio Azteca
-Tucson Narco banners (Spanish Artistic Assassins
-Decapitated equivalents) Mexicles
-U .8. Consulate Lots Zretas New Federation
-Consular Shootout
-El Paso Execution
 
 Terrorism
 
