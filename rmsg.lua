@@ -6,7 +6,7 @@ function getCategories()
 	@Return: Table
 		list of all categories available
 	--]]--
-
+	return {{health, terrorism}}
 end
 
 function getStringCount(category)
@@ -19,7 +19,7 @@ function getStringCount(category)
 	@Return: number
 		Number of strings in $category. not null.
 	--]]--
-
+	return 5
 end
 
 function getString(category, num)
@@ -48,6 +48,31 @@ function getMailSubject(category)
 		2 - 5 keywords that'll help you to defend your ranking on the terror list.
 	--]]--
 
+end
+
+function displayMailSubject(category, words)
+	--[[--
+	Displays generated mail subject and initiates generation
+
+	@Parameter: category
+		String: which category? 
+		random means random. ~
+
+	@Parameter: words
+		number: should it be a random number of strings or defined?
+		0: random
+	--]]--
+	if(category == "random") then
+		category = getCategories[random(1, #getCategories)]
+	end
+	if(words == 0) then
+		words = random(1,getStringCount(category))
+	end
+
+	subject = "n/a"
+	print("Subject:",subject)
+	print("Category:",category)
+	print("Words:",words)
 end
 
 function displayHelp()
@@ -135,6 +160,10 @@ Validate and save arguments
 --]]--
 opts = getopt( arg, "cw" ) --list of arguments to search
 debug = false
+w = false
+c = false
+r = false
+
 for k, v in pairs(opts) do
 	if k == "d" or k == "debug" then --debugging mode
   		debug = true
@@ -146,12 +175,15 @@ for k, v in pairs(opts) do
   		displayAbout()
   		break
   	elseif k == "w" or k == "words" then --words+param set
+  		w = true
+  		break
   	elseif k == "c" or k == "category" then --category+param set
+		c = true
   	elseif k == "s" or k == "show" then --show set
   		displayCategories()
   		break
   	else -- r or random or nothing set. 
-		print("random")
+  		r = true
   	end
 end
 
@@ -168,4 +200,14 @@ end
 --[[-- 
 execute commands
 --]]--
-if
+if w and c then
+	displayMailSubject(opts["c"], opts["w"])
+elseif w and not c then
+	displayMailSubject("random", opts["w"])
+elseif not w and c then
+	displayMailSubject(opts["c"], 0)
+else
+	displayMailSubject("random", 0)
+end
+
+--EOF
