@@ -1,4 +1,4 @@
-#That's just a template! I'll fill it later! 
+# This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
 strings = [
         "domestic_security":
             string: [
@@ -168,6 +168,10 @@ strings = [
                 "Border drug control",
                 "drug war",
                 "drug trade",
+                "ice mud slide",
+                "mud slide",
+                "hurricane",
+                "erosion",
                 "mexico",
                 "mexican army",
                 "illegal immigrants",
@@ -191,71 +195,86 @@ strings = [
         "terrorism":
             string: [
                 "terrorism",
-                ""
-            ,
+                "IED",
+                "improvised explosive suspicious substance",
+                "Al Qaeda",
+                "AQAP",
+                "arabian wedding",
+                "terror",
+                "attack",
+                "Hamas",
+                "Iraq",
+                "FARC",
+                "afghanistand forces",
+                "TTP",
+                "Tehrik-i-Taliban",
+                "Iran",
+                "IRA",
+                "Irish Republican Army",
+                "Pakistan",
+                "Pakistan ETA",
+                "Euskadi ta Askatasuna",
+                "Yemen",
+                "holidays",
+                "Pirates",
+                "Basque Seperatists",
+                "Environmental terrorist",
+                "Hezbollah",
+                "Extremism",
+                "Tamil Tigers Somalia",
+                "conventional weapon",
+                "PLF",
+                "Palestine Liberation Nigeria",
+                "Radicals",
+                "dirty bomb",
+                "organization",
+                "homegrown",
+                "enriched",
+                "car bomb",
+                "nuclear",
+                "jihad",
+                "nationalist",
+                "jihadist",
+                "chemical weapon",
+                "Taliban",
+                "Recmitment",
+                "biological weapon",
+                "weapons cache",
+                "fundamentalism",
+                "ammonium nitrate",
+                "suicide bomber",
+                "islamist",
+                "suicide attack"
+            ],
         "cyber_security":
             string: [
                 "cyber security",
-                ""
-            ,
+                "hacker",
+                "botnet",
+                "spammer",
+                "china",
+                "DDoS",
+                "dedicated denial of service",
+                "phishing",
+                "conficker",
+                "rootkit",
+                "worm",
+                "denial of service",
+                "network scanners",
+                "malware",
+                "cain and abel",
+                "social media",
+                "virus",
+                "brute force",
+                "brute forcing",
+                "trojan",
+                "MySQL Injection",
+                "keylogger",
+                "cyber attack",
+                "cyber terror"
+            ],
 
 ]
 
-window.strings = strings
 
-###
-comment
-This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
-
-Terrorism
-
-Terrorism IED (Improvised Explosive Suspicious substance
-Al Qaeda (all spellings) Device) AQAP (AL Qaeda Arabian
-Terror Abu Sayyaf Peninsula)
-Attack Hamas AQIM (Al Qaeda in the
-Iraq FARC (Armed Revolutionary Islamic Maghreb)
-Afghanistan Forces Colombia) TTP (Tehrik-i-Taliban
-Iran IRA (lri sh Republican Anny) Pakistan)
-Pakistan ETA (Euskadi ta Askatasuna) Yemen
-Agro Basque Separatists Pirates
-Environmental terrorist Hezbollah Extremism
-Eco terrorism Tamil Tigers Somalia
-Conventional weapon PLF (Palestine Liberation Nigeria
-Target Front) Radicals
-Weapons grade PLO (Palestine Liberation Al-Shabaab
-Dirty bomb Organization Home grown
-Enriched Car bomb Plot
-Nuclear Jihad Nationalist
-Chemical weapon Taliban Recmitment
-Biological weapon Weapons cache Fundamentalism
-Ammonium nitrate Suicide bomber lslamist
-Improvised explosive device Suicide attack
-Wentht:r!I)isIster/Emergency
-Emergency Ice Mud slide or Mudslide
-Hurricane StrandedlStuck Erosion
-Tomado Help Power outage
-Twister Hail Brown out
-Tsunami Wildﬁre Warning
-Earthquake Tsunami Waming Center Watch
-Tremor Magnitude Lightening
-Flood Avalanche Aid
-Storm Typhoon Relief
-Crest Shelter-in-place Closure
-Temblor Disaster Interstate
-Extreme weather Snow Burst
-Forest ﬁre Blizzard Emergency Broadcast System
-Brush ﬁre Sleet
-
-Cyber Security
-
-Cyber security 2600 Hacker
-Botnet Spammer China
-DDOS (dedicated denial of Phishing Conﬁcker
-service) Rootkit Worm
-Denial of service Pltreaking Scanuners
-Malware Cain and abel Social media
-Virus Brute forcing
-Trojan Mysql injection
-Keylogger Cyber attack
-Cyber Command Cyber tenor
-###
+# This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
