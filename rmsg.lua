@@ -133,44 +133,39 @@ end
 --[[--
 Validate and save arguments
 --]]--
-getMode = {} --empty table to collect arguments
-
-
 opts = getopt( arg, "cw" ) --list of arguments to search
+debug = false
 for k, v in pairs(opts) do
-	if k == "h" or k == "help" then --help set
+	if k == "d" or k == "debug" then --debugging mode
+  		debug = true
+  		break
+	elseif k == "h" or k == "help" then --help set
   		displayHelp()
-  		table.insert(getMode,"quit")
+  		break
   	elseif k == "about" then --about set
   		displayAbout()
-  		table.insert(getMode,"quit")
-  	elseif k == "w" or k == "words" then --words
-  		table.insert(getMode,"w")
-  	elseif k == "c" or k == "category" then --category
-  		table.insert(getMode,"c")
+  		break
+  	elseif k == "w" or k == "words" then --words+param set
+  	elseif k == "c" or k == "category" then --category+param set
+  	elseif k == "s" or k == "show" then --show set
+  		displayCategories()
+  		break
   	else -- r or random or nothing set. 
-		
-		table.insert(getMode,"random")
+		print("random")
   	end
+end
+
+--[[--
+debugging mode
+--]]--
+if debug then
+	print("\n\n\n\n--------- DEBUGGING MODE ---------")
+	for key, value in pairs(opts) do
+		print(key, value)
+	end
 end
 
 --[[-- 
 execute commands
 --]]--
-
---[[--
-handling after about and hepl display
---]]--
-
-if getMode[1] == "random" then
-	--random
-elseif getMode[1] == "w" then
-	if getMode[2] ~= nil then
-		if getMode[2] == "c" then
-			--c
-		end
-	end
-	--w
-end
-
---EOF
+if
