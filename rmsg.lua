@@ -83,50 +83,84 @@ function displayError(error)
 	print("ERROR:",error)
 end
 
---[[--
-Begin interactive command line tool
---]]--
+function getopt( arg, options )
+	--[[--
+	get POSIX-styled arguments from commands line input.
+	
+	@Parameter: arg
+		Arguments to check. Type: table/array
 
-local userArguments = {} --construct an empty table for the user-given arguments
-local finalCommand = {}  --construct an empty table for the commands to be executed
+	@Parameter: options
+		character to accept.
 
---[[ get user arguments ]]
-for posn,val in ipairs (arg) do
-	if string.find(val,"^%-[a-zA-Z]$") then 		--a command starting with a single dash (like -h)
-		local insert = string.sub(val,2,2)
-		table.insert(userArguments, posn, insert)
-	elseif string.find(val,"^%-%-[a-zA-Z]+$") then 	--a command starting with a double dash (like --help)
-		local insert = string.sub(val,3,3)
-		table.insert(userArguments, posn, insert)
-	end
+	@Return: tab
+		List of arguments.
+	--]]--
+		local tab = {}
+		for k, v in ipairs(arg) do
+			if string.sub( v, 1, 2) == "--" then
+				local x = string.find( v, "=", 1, true )
+				if x then 
+					tab[ string.sub( v, 3, x-1 ) ] = string.sub( v, x+1 )
+				else      
+					tab[ string.sub( v, 3 ) ] = true
+				end
+			elseif string.sub( v, 1, 1 ) == "-" then
+				local y = 2
+				local l = string.len(v)
+				local jopt
+				while ( y <= l ) do
+					jopt = string.sub( v, y, y )
+					if string.find( options, jopt, 1, true ) then
+					  	if y < l then
+					    	tab[ jopt ] = string.sub( v, y+1 )
+					    	y = l
+					  	else
+					    	tab[ jopt ] = arg[ k + 1 ]
+					  	end
+					else
+					  	tab[ jopt ] = true
+					end
+					y = y + 1
+				end
+			end
+		end
+  	return tab
 end
 
+-- Test code
 
--- [[ process user input ]]
-for pos, argument in ipairs(userArguments) do
-	if argument == "h" then 						--help
-		displayHelp()
-	elseif argument == "w" then						--words
-		local parameter = arg[pos+1]
-		if parameter == nil then --parameter is nil
-			displayError("The wordcount parameter expects to be set.")
-		elseif string.find("9"..parameter.."9","^[0-9]+$") then --parameter is a number
-			table.insert(finalCommand,"w;"..parameter)
-		else 									--parameter is not a number
-			displayError("The wordcount parameter expects to be a numeric value.")
-		end --end type check
-	elseif argument == "c" then
-		local parameter = arg[pos+1]
-		if parameter == nil or string.find(parameter,"^%-[a-zA-Z]$") or string.find(parameter,"^%-%-[a-zA-Z]+$") then --check if it is an argument
-			displayCategories()
-		else -- parameter set
-			table.insert(finalCommand,"c;"..parameter)
-		end
-	elseif argument == "a" then 					--about
-		displayAbout()
-	else 											--random && default
-		--[[ This line of code does not exist. ]]
-	end --end if $argument
-end --end for
+--[[--
+Validate and save arguments
+--]]--
+getMode = {} --empty table to collect arguments
 
--- [[ start generating ]]
+
+opts = getopt( arg, "cw" ) --list of arguments to search
+for k, v in pairs(opts) do
+	if k == "h" or k == "help" then --help set
+  		displayHelp()
+  		table.insert(getMode,"quit")
+  	elseif k == "about" then --about set
+  		displayAbout()
+  		table.insert(getMode,"quit")
+  	elseif k == "w" or k == "words" then --words
+
+  		table.insert(getMode,"w")
+  	elseif k == "c" or k == "category" then --category
+  		
+  		table.insert(getMode,"c")
+  	else -- r or random or nothing set. 
+		
+		table.insert(getMode,"random")
+  	end
+end
+
+--[[-- 
+execute commands
+--]]--
+
+for index,value in pairs(getMode) do
+	print(index,value,opts[ value ])
+end
+
