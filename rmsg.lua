@@ -145,10 +145,8 @@ for k, v in pairs(opts) do
   		displayAbout()
   		table.insert(getMode,"quit")
   	elseif k == "w" or k == "words" then --words
-
   		table.insert(getMode,"w")
   	elseif k == "c" or k == "category" then --category
-  		
   		table.insert(getMode,"c")
   	else -- r or random or nothing set. 
 		
@@ -160,7 +158,19 @@ end
 execute commands
 --]]--
 
-for index,value in pairs(getMode) do
-	print(index,value,opts[ value ])
+--[[--
+handling after about and hepl display
+--]]--
+
+if getMode[1] == "random" then
+	--random
+elseif getMode[1] == "w" then
+	if getMode[2] ~= nil then
+		if getMode[2] == "c" then
+			--c
+		end
+	end
+	--w
 end
 
+--EOF
