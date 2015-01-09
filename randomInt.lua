@@ -12,9 +12,10 @@ function srandom( seedobj, fVal1, fVal2 )
         contains "{ seed = -265789120 }" formatted signed integer value
 
     @Parameter: fVal1
-        
+        minimal 
 
     @Parameter: fVal2
+        maximal
 
     @Return: temp_rand
         pseudo-random integer value.
