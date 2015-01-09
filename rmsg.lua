@@ -19,7 +19,7 @@ function getStringCount(category)
 	@Return: number
 		Number of strings in $category. not null.
 	--]]--
-	return 5
+	return 10
 end
 
 function getString(category, num)
