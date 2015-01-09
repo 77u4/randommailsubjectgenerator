@@ -1,4 +1,6 @@
 -- WTF.
+local randomInt = require("randomInt.lua")
+
 function getCategories()
 	--[[--
 	Gets all available categories from the json file.
@@ -63,7 +65,7 @@ function displayMailSubject(category, words)
 		0: random
 	--]]--
 	if(category == "random") then
-		category = getCategories(math.random(1, 5))
+		category = getCategories(math.random(1))
 	end
 	if(words == 0) then
 		words = random(1,getStringCount(category))
