@@ -6,7 +6,7 @@ function getCategories()
 	@Return: Table
 		list of all categories available
 	--]]--
-	return {{health, terrorism}}
+	return {health, terrorism}
 end
 
 function getStringCount(category)
@@ -63,7 +63,7 @@ function displayMailSubject(category, words)
 		0: random
 	--]]--
 	if(category == "random") then
-		category = getCategories[random(1, #getCategories)]
+		category = getCategories(math.random(1, 5))
 	end
 	if(words == 0) then
 		words = random(1,getStringCount(category))
