@@ -276,5 +276,4 @@ strings = [
 
 ]
 
-
 # This list is taken from http://rt.com/usa/dhs-list-suspicious-words-302/ and parsed via ocr.
