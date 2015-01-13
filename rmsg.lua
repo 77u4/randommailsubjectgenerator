@@ -1,5 +1,5 @@
 -- WTF.
-local randomInt = require("randomInt.lua")
+local randomInt = require("./randomInt")
 
 function getCategories()
 	--[[--
@@ -68,7 +68,7 @@ function displayMailSubject(category, words)
 		category = getCategories(math.random(1))
 	end
 	if(words == 0) then
-		words = random(1,getStringCount(category))
+		words = random(1, getStringCount(category))
 	end
 
 	subject = "n/a"
