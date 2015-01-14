@@ -8,7 +8,7 @@ function getCategories()
 	@Return: Table
 		list of all categories available
 	--]]--
-	return {health, terrorism}
+	return {"health", "terrorism"}
 end
 
 function getStringCount(category)
@@ -65,10 +65,12 @@ function displayMailSubject(category, words)
 		0: random
 	--]]--
 	if(category == "random") then
-		category = getCategories(math.random(1))
+		categoryCount = #getCategories()
+		rand = srandom({seed = -235798}, 1, categoryCount)
+		category = getCategories[rand]
 	end
 	if(words == 0) then
-		words = random(1, getStringCount(category))
+		words = srandom(1, getStringCount(category))
 	end
 
 	subject = "n/a"
