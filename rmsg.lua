@@ -66,12 +66,11 @@ function displayMailSubject(category, words)
 	--]]--
 	if(category == "random") then
 		local seedobj = {seed = -232343}
-		local rand = math.random( 3 )
-		print(rand)
+		local rand = math.random( #getCategories )
 		category = getCategories[rand]
 	end
 	if(words == 0) then
-		words = srandom(1, getStringCount(category))
+		words = math.random(getStringCount(category))
 	end
 
 	subject = "n/a"
