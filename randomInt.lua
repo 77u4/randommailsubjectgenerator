@@ -22,7 +22,7 @@ function srandom( seedobj, fVal1, fVal2 )
 
     --]]--
     local ma = seedobj.ma
-    local seed = seedobj.seed
+    local seed = seedobj.seed or -278275938267561728564891276589763278568719265782635712857391274917192804657826378567561515861432
     local mj, mk
     if seed < 0 or not ma then
         ma = {}
@@ -70,9 +70,11 @@ function srandom( seedobj, fVal1, fVal2 )
 end
 
 --[[--
-test
+test && debug
 --]]--
+--[[--
 local seedobj = { seed = -232343 }
 for i = 1, 100 do
-    print( srandom( seedobj, 100, 1000 ) )
+    print( srandom( seedobj, 1, 2 ) )
 end
+--]]--

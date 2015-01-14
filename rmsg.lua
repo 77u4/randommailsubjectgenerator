@@ -65,8 +65,9 @@ function displayMailSubject(category, words)
 		0: random
 	--]]--
 	if(category == "random") then
-		categoryCount = #getCategories()
-		rand = srandom({seed = -235798}, 1, categoryCount)
+		local seedobj = {seed = -232343}
+		local rand = math.random( 3 )
+		print(rand)
 		category = getCategories[rand]
 	end
 	if(words == 0) then
