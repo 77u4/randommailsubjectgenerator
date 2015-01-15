@@ -65,7 +65,6 @@ function displayMailSubject(category, words)
 		0: random
 	--]]--
 	if(category == "random") then
-		local seedobj = {seed = -232343}
 		local rand = math.random( #getCategories )
 		category = getCategories[rand]
 	end
